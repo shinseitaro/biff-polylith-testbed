@@ -1,0 +1,14 @@
+{:deps    {org.clojure/clojure   {:mvn/version "1.11.1"}
+           poly/single-optin-app {:local/root "../../bases/single-optin-app"}
+
+           poly/app              {:local/root "../../components/app"}
+           poly/auth             {:local/root "../../components/auth"}
+           poly/db               {:local/root "../../components/db"}
+           poly/home             {:local/root "../../components/home"}
+           poly/middleware       {:local/root "../../components/middleware"}
+           poly/ui               {:local/root "../../components/ui"}
+           poly/email            {:local/root "../../components/email"}}
+
+ :aliases {:test    {:extra-paths []
+                     :extra-deps  {}}
+           :uberjar {:main example.single-optin-app.main}}}

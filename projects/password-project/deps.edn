@@ -1,0 +1,13 @@
+{:deps    {org.clojure/clojure {:mvn/version "1.11.1"}
+           poly/password-app   {:local/root "../../bases/password-app"}
+
+           poly/app            {:local/root "../../components/app"}
+           poly/auth           {:local/root "../../components/auth"}
+           poly/db             {:local/root "../../components/db"}
+           poly/home           {:local/root "../../components/home"}
+           poly/middleware     {:local/root "../../components/middleware"}
+           poly/ui             {:local/root "../../components/ui"}}
+
+ :aliases {:test    {:extra-paths []
+                     :extra-deps  {}}
+           :uberjar {:main example.password-app.main}}}

@@ -54,3 +54,5 @@ projects/**/pom.xml
 .lsp/
 .portal/
 .shadow-cljs/
+
+.cljfmt.edn

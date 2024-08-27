@@ -1,0 +1,10 @@
+{:paths   ["src" "resources"]
+ :deps    {com.biffweb/biff           {:git/tag "v1.8.19"
+                                       :git/sha "32640d2"
+                                       :git/url "https://github.com/jacobobryant/biff"}
+           org.slf4j/slf4j-simple     {:mvn/version "2.0.0-alpha5"}
+           org.slf4j/log4j-over-slf4j {:mvn/version "1.7.36"}
+           org.slf4j/jul-to-slf4j     {:mvn/version "1.7.36"}
+           org.slf4j/jcl-over-slf4j   {:mvn/version "1.7.36"}}
+ :aliases {:test {:extra-paths ["test"]
+                  :extra-deps  {}}}}

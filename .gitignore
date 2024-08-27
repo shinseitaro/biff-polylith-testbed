@@ -46,7 +46,7 @@ projects/**/pom.xml
 /config.env
 /node_modules
 /secrets.env
-/storage/
+storage/
 /tailwindcss
 /target
 .calva/

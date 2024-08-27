@@ -1,8 +1,35 @@
-{:aliases  {:dev {:extra-paths ["development/src"]
+{:aliases {:dev   {:extra-paths ["development/src"]
 
-                  :extra-deps {org.clojure/clojure {:mvn/version "1.11.1"}}}
+                   :extra-deps  {org.clojure/clojure    {:mvn/version "1.11.1"}
+                                 poly/app               {:local/root "components/app"}
+                                 poly/db                {:local/root "components/db"}
+                                 poly/email             {:local/root "components/email"}
+                                 poly/home              {:local/root "components/home"}
+                                 poly/middleware        {:local/root "components/middleware"}
+                                 poly/ui                {:local/root "components/ui"}
 
-            :test {:extra-paths []}
+                                 poly/auth-password     {:local/root "components/auth-password"}
+                                 poly/auth-single-optin {:local/root "components/auth-single-optin"}
 
-            :poly {:main-opts ["-m" "polylith.clj.core.poly-cli.core"]
-                   :extra-deps {polylith/clj-poly {:mvn/version "0.2.19"}}}}}
+                                 poly/password-app      {:local/root "bases/password-app"}
+                                 poly/single-optin-app  {:local/root "bases/single-optin-app"}}}
+
+           :test  {:extra-paths ["components/app/test"
+                                 "components/db/test"
+                                 "components/email/test"
+                                 "components/home/test"
+                                 "components/middlewar/test"
+                                 "components/ui/test"
+
+                                 "components/auth-password/test"
+                                 "components/auth-single-optin/test"
+
+                                 "bases/password-app/test"
+                                 "bases/single-optin-app/test"]}
+
+           :poly  {:main-opts  ["-m" "polylith.clj.core.poly-cli.core"]
+                   :extra-deps {polylith/clj-poly {:mvn/version "0.2.19"}}}
+
+           :build {:deps       {io.github.clojure/tools.build {:mvn/version "0.9.6"}
+                                org.clojure/tools.deps        {:mvn/version "0.16.1281"}}
+                   :ns-default build}}} 

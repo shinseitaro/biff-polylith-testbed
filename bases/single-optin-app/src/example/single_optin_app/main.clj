@@ -45,7 +45,10 @@
   [["" {:middleware [mid/wrap-redirect-signed-in
                      [home/wrap-options home-options]]}
     ["/" {:get home/home-page}]
-    ["/signup" {:get home/signin-page}]]
+    ["/signin" {:get home/signin-page}]
+    ["/link-sent" {:get home-single-optin/link-sent}]
+    ["/verify-link" {:get home-single-optin/verify-email-page}]
+    ["/verify-code" {:get home-single-optin/enter-code-page}]]
 
    ["/app" {:middleware [[app/wrap-options default-app-options]
                          mid/wrap-signed-in]}
